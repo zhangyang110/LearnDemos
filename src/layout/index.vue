@@ -12,7 +12,7 @@
             layout() {
                 let firstPath = this.$route.matched.find(f => f.path);//第一层 route 匹配到的
                 if (firstPath) {
-                    return firstPath.meta.layout || "basicLayout"
+                  return firstPath.meta.layout || "basicLayout"
                 }
                 return "basicLayout"
             }

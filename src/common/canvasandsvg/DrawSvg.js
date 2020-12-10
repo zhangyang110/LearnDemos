@@ -4,7 +4,7 @@ export default function DrawSvg(container) {
   this.svgWidth = this.contaier.clientWidth;
   this.svgHeight = this.contaier.clientHeight;
   this.svgC = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-};
+}
 DrawSvg.prototype.init = function (data) {
   this.svgData = data;
   this.svgC.setAttribute('width', `${this.svgWidth}`);

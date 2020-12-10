@@ -21,8 +21,8 @@ export default function DrawPie(ctx) {
   this.centerPoint = {
     x: canvasWidth / 2,
     y: canvasHeight / 2
-  };
-};
+  }
+}
 DrawPie.prototype.init = function (data) {
   let total = data.reduce((total, next) => {
     return total + next.num;

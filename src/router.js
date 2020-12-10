@@ -17,7 +17,7 @@ VueRouter.prototype.push = function push(location) {
     return originalPush.call(this, location).catch(err => err)
 };
 const router = new VueRouter({
-    mode: "history",
+    mode: "hash",
     routes: [
         {
             path: '/',
@@ -27,6 +27,7 @@ const router = new VueRouter({
                 ...routes
             ]
         },
+        { path: '*', component:  () => import("./pages/404"), }
     ]
 });
 
