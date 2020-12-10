@@ -61,7 +61,7 @@
           autoIndent: true, //自动布局
           ...self.propEditorOptions,
         })
-        self.monacoEditor.onDidChangeModelContent(function (event) {//编辑器内容changge事件
+        self.monacoEditor.onDidChangeModelContent(function () {//编辑器内容changge事件
           self.codes = self.monacoEditor.getValue()
           self.$emit('change', self.codes)
           self.$emit('codeChange', self.codes)

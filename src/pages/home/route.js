@@ -28,6 +28,14 @@ const route = [{
                 desc:'原生Canvas绘折线图'
             }
         },
+        {
+            path: 'monaco',
+            name: 'monaco',
+            component: () => import("./monaco/index"),
+            meta:{
+                desc:'monaco插件'
+            }
+        },
     ]
 },
 ];
