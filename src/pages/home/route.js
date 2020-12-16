@@ -36,6 +36,22 @@ const route = [{
                 desc:'monaco插件'
             }
         },
+        {
+            path: 'compressImg',
+            name: 'compressImg',
+            component: () => import("./compressImg/index"),
+            meta:{
+                desc:'前端压缩图片'
+            }
+        },
+        {
+            path: 'interview',
+            name: 'interview',
+            component: () => import("./interview/index"),
+            meta:{
+                desc:'面试题'
+            }
+        }
     ]
 },
 ];
