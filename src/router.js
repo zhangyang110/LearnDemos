@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-
 Vue.use(VueRouter);
 // const context = require.context('./route', true, /\/*\/route\.js$/);
 // const keys = context.keys();
@@ -21,10 +20,17 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            redirect: "/home",
+            // redirect: "/home",
             component: DynamicLayout,
             children: [
-                // ...routes
+                {
+                    path: 'drawSvg',
+                    name: 'drawSvg',
+                    component: () => import("@/pages/drawSvg"),
+                    meta:{
+                        desc:'原生svg绘图'
+                    },
+                },
             ]
         },
         { path: '*', component:  () => import("./pages/404"), }

@@ -6,10 +6,8 @@
     </div>
 </template>
 <script>
-    import minx from "./minx";
     export default {
         name: "basicLayout",
-        mixins: [minx],
     }
 </script>
 <style scoped lang="less">

@@ -5,6 +5,8 @@ export default {
         this.debounceResizeFn=_.debounce(this.setContentSize,300);
     },
     mounted(){
+         console.log('999666');
+        
         this.setContentSize();
         window.addEventListener('resize',this.debounceResizeFn)
     },
@@ -13,6 +15,8 @@ export default {
     },
     methods:{
         setContentSize(){
+             console.log('333');
+            
             const {content:refContent}=this.$refs;
             if(refContent){
                 this.$store.commit("setContent",{
