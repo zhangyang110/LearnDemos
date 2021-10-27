@@ -4,9 +4,7 @@ export default [
             name: 'drawSvg',
             component: () => import("./drawSvg/index"),
             children:[
-                {
-                    
-                }
+             
             ],
             meta:{
                 desc:'原生svg绘图'
