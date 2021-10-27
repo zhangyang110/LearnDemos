@@ -1,5 +1,5 @@
 <template>
-<div>暂无内容</div>
+<div>compressImg暂无内容</div>
 </template>
 
 <script>

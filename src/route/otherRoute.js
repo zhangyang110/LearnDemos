@@ -1,16 +1,16 @@
-const route = [{
-    path: '/home',
-    name: 'home',
-    redirect:'/home/drawSvg',
-    component: () => import("./index"),
-    children: [
+export default [
         {
             path: 'drawSvg',
             name: 'drawSvg',
             component: () => import("./drawSvg/index"),
+            children:[
+                {
+                    
+                }
+            ],
             meta:{
                 desc:'原生svg绘图'
-            }
+            },
         },
         {
             path: 'drawPie',
@@ -53,6 +53,3 @@ const route = [{
             }
         }
     ]
-},
-];
-export default route;

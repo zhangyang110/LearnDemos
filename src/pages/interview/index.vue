@@ -5,10 +5,10 @@
 <script>
 export default {
   name: "interview",
-  data(){
-
+  data() {
+    return {}
   },
-  methods:{
+  methods: {
     //
   }
 
