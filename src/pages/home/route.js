@@ -45,13 +45,21 @@ const route = [{
             }
         },
         {
-            path: 'interview',
-            name: 'interview',
-            component: () => import("./interview/index"),
+            path: 'SeamlessCarousel',
+            name: 'SeamlessCarousel',
+            component: () => import("./SeamlessCarousel/index"),
             meta:{
-                desc:'面试题'
+                desc:'垂直无缝轮播demo'
             }
-        }
+        },
+        {
+            path: 'coumputedRGB',
+            name: 'coumputedRGB',
+            component: () => import("./coumputedRGB"),
+            meta:{
+                desc:'渐变色计算公式'
+            }
+        },
     ]
 },
 ];

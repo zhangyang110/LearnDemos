@@ -27,7 +27,6 @@ Service.interceptors.response.use(response => {
     loadingInstance.close()
     return response.data
 }, error => {
-    console.log('TCL: error', error)
     const msg = error.Message !== undefined ? error.Message : ''
     Message({
         message: '网络错误' + msg,
