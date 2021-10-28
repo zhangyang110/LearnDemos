@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Monaco from "@/pages/components/monaco"
+import Monaco from "@/components/monaco"
 
 export default {
   name: "index",

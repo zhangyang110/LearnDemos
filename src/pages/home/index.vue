@@ -32,38 +32,21 @@
   </el-container>
 </template>
 <script>
-import { otherRoute, staticRroute } from "./route";
-
-//let routes = originRoutes[0].children.map((item) => {
-//  return {
-//    name: item.name,
-//    meta: item.meta,
-//  };
-//});
 export default {
   name: "homePage",
   data() {
     return {
-      routes,
       activeRoute: "drawSvg",
     };
   },
   created() {
     this.activeRoute = this.$route.name;
-    this.asyncGetAuthRoute();
   },
   methods: {
     changeRoute(routeName) {
       this.$router.push(routeName);
     },
-    asyncGetAuthRoute() {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          this.routes = [];
-          resolve();
-        }, 1500);
-      });
-    },
+  
   },
 };
 </script>

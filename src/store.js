@@ -6,12 +6,17 @@ export default new Vuex.Store({
     state: {
         contentWidth: 0,
         contentHeight: 0,
+        LocalRoutes: null,
     },
     mutations: {
-        setContent(state, {contentWidth, contentHeight}) {
+        setContent(state, { contentWidth, contentHeight }) {
             state.contentWidth = contentWidth;
             state.contentHeight = contentHeight;
-        }
+        },
+        setRoutes(state, LocalRoutes) {
+            state.LocalRoutes = LocalRoutes;
+        },
+
     },
     getters: {},
     actions: {},

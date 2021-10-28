@@ -1,5 +1,5 @@
 <template>
-  <div id="canvasC">
+  <div id="canvasCLine">
 
   </div>
 </template>
@@ -87,7 +87,7 @@ export default {
 
   methods: {
     drawLine() {
-      let canvasC = document.getElementById('canvasC');
+      let canvasC = document.getElementById('canvasCLine');
       canvasC.innerHTML = '';
       let canvasEl = document.createElement('canvas');
       canvasEl.setAttribute('width',this.canvasW)

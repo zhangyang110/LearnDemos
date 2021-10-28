@@ -3,11 +3,11 @@
 </template>
 <script>
 import basicLayout from "./basicLayout";
-import { setContentMinx } from "@/mixins";
+import  mixins   from "@/mixins";
 
 export default {
   name: "layout",
-  mixins: [setContentMinx],
+  mixins: [mixins.setContentMinx],
   components: {
     basicLayout,
   },

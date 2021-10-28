@@ -31,5 +31,4 @@ let sortByMySelf = function (arr, key) {
     }, [])
 }
 let result = sortByMySelf(ary, 'age')
-console.log(result, 'result');
 
