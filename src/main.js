@@ -11,12 +11,13 @@ import echarts from 'echarts'
 //模拟数据
 import './mock'
 import AMap from 'vue-amap';
+import jsPlumb from 'jsplumb';
+Vue.prototype.$jsPlumb = jsPlumb.jsPlumb
 Vue.use(AMap);
-
-
 Vue.config.productionTip = false;
 Vue.prototype.moment = moment;
 Vue.prototype.$echarts = echarts
+
 
 Vue.use(ElementUI);
 // 初始化vue-amap 高德地图

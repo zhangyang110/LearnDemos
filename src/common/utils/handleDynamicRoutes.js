@@ -18,6 +18,7 @@ export const diguiRoutes = (routes) => {
         }
     })
 }
+    
 export const dynamicRoutes = (asyncRoutes) => {
     return staticRoutes.map(t => {
         if (t.path === '/') {

@@ -14,6 +14,7 @@
     "echarts": "^4.8.0",
     "element-ui": "^2.13.2",
     "es6-promise": "^4.2.8",
+    "jsplumb": "^2.15.6",
     "lodash": "^4.17.15",
     "mockjs": "^1.1.0",
     "moment": "^2.26.0",

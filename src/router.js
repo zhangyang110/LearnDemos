@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import {staticRoutes} from "@/route"
+import { staticRoutes } from "@/route"
+// import { descending } from "d3-array";
 
 Vue.use(VueRouter);
 // const context = require.context('./route', true, /\/*\/route\.js$/);
