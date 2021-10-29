@@ -13,6 +13,7 @@ export const staticRoutes=[
 export const notFoundRoute=[
     { path: '*', component: () => import("@/pages/404"), }
 ]
+//这个是 当作axios 接口请求返回的作用
 
 export default [
     {
@@ -72,5 +73,13 @@ export default [
         meta:{
             desc:'面试题'
         }
-    }
+    },
+    {
+        path: 'jsPlumb',
+        name: 'jsPlumb',
+        component: "jsPlumb",
+        meta:{
+            desc:'jsPlumb插件'
+        }
+    },
 ]

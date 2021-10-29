@@ -12,7 +12,11 @@ module.exports = {
     assetsDir: "static",
     devServer: {
         port: 8080,
-        open:true,
+        open: true,
+        overlay: {
+            warnings: true,
+            errors: false
+        },
         proxy: {
             "/api": {
                 target: "http://192.168.43.1",

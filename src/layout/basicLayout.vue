@@ -17,7 +17,6 @@
     </el-aside>
     <el-container>
       <el-main>
-        {{$route.name}}
         <router-view></router-view>
       </el-main>
     </el-container>
