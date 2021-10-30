@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    123
     <router-view></router-view>
+    master 提交后
+
   </div>
 </template>
 <script>
