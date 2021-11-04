@@ -2,7 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import { staticRoutes } from "@/route"
 // import { descending } from "d3-array";
-
 Vue.use(VueRouter);
 // const context = require.context('./route', true, /\/*\/route\.js$/);
 // const keys = context.keys();
@@ -18,9 +17,14 @@ const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
     return originalPush.call(this, location).catch(err => err)
 };
-const router = new VueRouter({
+const creatRouter=()=>new VueRouter({
     mode: "hash",
     routes: staticRoutes
 });
+const router = creatRouter()
 
+export const resetRouter=()=>{
+    const newRouter=creatRouter()
+    router.matcher=newRouter.matcher;
+}
 export default router;
