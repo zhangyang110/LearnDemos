@@ -6,7 +6,6 @@
       </div>
     </div>
     <div class="right">
-      9999
       <router-view></router-view>
     </div>
   </div>

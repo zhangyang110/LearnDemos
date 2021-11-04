@@ -6,16 +6,21 @@
 <script>
 import asyncRoute from "@/route";
 import { dynamicRoutes } from "@/common/utils/handleDynamicRoutes";
+import { resetRouter } from "@/router"
 export default {
   name: "login",
   data() {
     return {};
+  },
+  mounted(){
+    localStorage.clear()
   },
   methods: {
     async doLogin() {
       this.getUserInfo();
       let gettedRoutes = await this.asyncGetAuthRoute();
       await localStorage.setItem("addRoutes", JSON.stringify(gettedRoutes));
+      resetRouter()
       let addRoutes = dynamicRoutes(gettedRoutes);
       this.$router.addRoutes(addRoutes);
       let firstPath = addRoutes.find((t) => t.path === "/")["children"][0][
