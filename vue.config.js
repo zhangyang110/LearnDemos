@@ -35,12 +35,6 @@ module.exports = {
         config.resolve.alias
             .set("@", resolve("src"))
             .set("@static", resolve("static"))
-            config.plugin('provide').use(webpack.ProvidePlugin, [{
-                $: 'jquery',
-                jquery: 'jquery',
-                jQuery: 'jquery',
-                'window.jQuery': 'jquery'
-              }])
     },
     configureWebpack: {
         plugins: [
