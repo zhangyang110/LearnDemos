@@ -6,6 +6,12 @@
   </div>
 </template>
 <script>
+import { defineComponent } from '@vue/composition-api'
+export default defineComponent({
+  setup() {
+    
+  },
+})
 import moveItem from "./moveItem.vue";
 import instance from "./config";
 export default {
@@ -52,6 +58,54 @@ export default {
           },
         ];
       },
+export default {
+  name: "jsPlumpComponent",
+  data() {
+    return {};
+  },
+  props: {
+    dataList: {
+      default: () => {
+        return [
+          {
+            sourceNodeId: "processDefineDiv_node_2",
+            targetNodeId: "processDefineDiv_node_3",
+          },
+          {
+            sourceNodeId: "processDefineDiv_node_2",
+            targetNodeId: "processDefineDiv_node_5",
+          },
+          {
+            sourceNodeId: "processDefineDiv_node_3",
+            targetNodeId: "processDefineDiv_node_5",
+          },
+          {
+            sourceNodeId: "processDefineDiv_node_5",
+            targetNodeId: "processDefineDiv_node_3",
+          },
+          {
+            sourceNodeId: "processDefineDiv_node_3",
+            targetNodeId: "processDefineDiv_node_6",
+          },
+          {
+            sourceNodeId: "processDefineDiv_node_5",
+            targetNodeId: "processDefineDiv_node_4",
+          },
+          {
+            sourceNodeId: "processDefineDiv_node_4",
+            targetNodeId: "processDefineDiv_node_5",
+          },
+          {
+            sourceNodeId: "processDefineDiv_node_5",
+            targetNodeId: "processDefineDiv_node_6",
+          },
+          {
+            sourceNodeId: "processDefineDiv_node_4",
+            targetNodeId: "processDefineDiv_node_6",
+          },
+        ];
+      },
+      type: Array,
     },
   },
   components: {
@@ -70,7 +124,6 @@ export default {
     init() {
       let { jsPlumb, connactList } = this;
       jsPlumb.ready(function () {
-        console.log("🚀 ~ 99", 99);
         connactList.forEach((element) => {
           jsPlumb.connect({
             source: element.sourceNodeId,

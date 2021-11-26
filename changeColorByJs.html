@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    :root {
+        --test: red
+    }
+    #ceshi {
+        color: var(--test)
+    }
+</style>
+<body>
+<div id="ceshi" onclick="_click()">点击改变我的颜色</div>
+</body>
+<script>
+    function _click() {
+        let el = document.getElementById('ceshi');
+        document.body.style.setProperty('--test','yellow')
+        console.log(99);
+    }
+
+
+</script>
+</html>

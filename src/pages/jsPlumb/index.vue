@@ -5,7 +5,6 @@
 </template>
 <script>
 import jsPlumpComponent from "@/components/jsPlumb";
-
 export default {
   data() {
     return {};

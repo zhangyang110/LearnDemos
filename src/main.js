@@ -3,7 +3,7 @@ import App from './App.vue';
 import moment from "moment";
 import store from "./store";
 import router from "./router";
-import {sync} from 'vuex-router-sync';
+import {sync} from 'vuex-router-sync'; 
 import '@/common/style/index.less';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -29,7 +29,11 @@ AMap.initAMapApiLoader({
     v: '1.4.4',
     uiVersion: '1.0'
 });
+<<<<<<< HEAD
 sync(store, router);  
+=======
+sync(store,router);  
+>>>>>>> 012edfbdc07aed2f10c18f5961d541410204b301
 new Vue({
     router,
     store,

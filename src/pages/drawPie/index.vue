@@ -6,7 +6,10 @@
       </div>
     </div>
     <div class="right">
+<<<<<<< HEAD
       9999
+=======
+>>>>>>> 012edfbdc07aed2f10c18f5961d541410204b301
       <router-view></router-view>
     </div>
   </div>
