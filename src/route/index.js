@@ -82,4 +82,28 @@ export default [
             desc:'jsPlumb插件'
         }
     },
+    {
+        path: 'turn',
+        name: 'turn',
+        component: "turn",
+        meta:{
+            desc:'turnJs 插件'
+        }
+    },
+    {
+        path: 'SeamlessCarousel',
+        name: 'SeamlessCarousel',
+        component: "SeamlessCarousel",
+        meta:{
+            desc:'SeamlessCarousel 插件'
+        }
+    },
+    {
+        path: 'coumputedRGB',
+        name: 'coumputedRGB',
+        component: "coumputedRGB",
+        meta:{
+            desc:'计算渐变 '
+        }
+    },
 ]

@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import {compressImgFn} from "@/common/utils/compressImg.js"
 export default {
   name: "compressImg",
 }

@@ -3,9 +3,6 @@
     <ul class="c" ref="container">
       <li v-for="(item,i) in list" :key="i"> {{ i }}</li>
     </ul>
-<!--    <div class="d">red</div>-->
-<!--    <div class="e">blue</div>-->
-<!--    <div class="f">yellow</div>-->
     <div class="mylinear">mylinear</div>
   </div>
 </template>

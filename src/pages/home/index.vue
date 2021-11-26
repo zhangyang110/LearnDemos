@@ -1,5 +1,6 @@
 <template>
-  <el-container style="height: 100%">
+<div>home</div>
+  <!-- <el-container style="height: 100%">
     <el-aside
       width="200px"
       style="background-color: #545c64; user-select: none"
@@ -29,7 +30,7 @@
         <router-view></router-view>
       </el-main>
     </el-container>
-  </el-container>
+  </el-container> -->
 </template>
 <script>
 export default {

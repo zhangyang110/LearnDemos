@@ -22,12 +22,6 @@ export const joinPath = (routes, parentPath = '',) => {
         }
     })
 }
-
-// export const changeRoutes = (routes) => {
-//     routes
-
-// }
-
 //主要转换path 字段 并且按照规则拼接
 export const routerToMenu = (routes) => {
     let aa = joinPath(routes)
