@@ -1,5 +1,5 @@
 <template>
-  <div class="moveItem">moveItem</div>
+  <div class="aa"  :id="itemData.node_id">moveItem</div>
 </template>
 
 <script>
@@ -9,9 +9,14 @@ export default {
     return {};
   },
   props: {
-    id: {
-      default: "",
-      type: String,
+    itemData: {
+      default: ()=>{
+        return {
+          node_id:'',
+          class:''
+        }
+      },
+      type: Object,
     },
   },
 
@@ -24,9 +29,11 @@ export default {
   methods: {},
 };
 </script>
-<style lang='scss' scoped>
-.moveItem {
+<style lang='less' scoped>
+.aa {
   width: 100px;
   height: 100px;
+  display: inline-block;
   border: 1px solid red;
 }
+</style>
