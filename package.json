@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "composition-api": "0.0.0",
     "core-js": "^3.6.5",
     "d3": "^5.16.0",
     "echarts": "^4.8.0",

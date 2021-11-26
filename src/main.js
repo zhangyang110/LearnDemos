@@ -29,11 +29,7 @@ AMap.initAMapApiLoader({
     v: '1.4.4',
     uiVersion: '1.0'
 });
-<<<<<<< HEAD
 sync(store, router);  
-=======
-sync(store,router);  
->>>>>>> 012edfbdc07aed2f10c18f5961d541410204b301
 new Vue({
     router,
     store,

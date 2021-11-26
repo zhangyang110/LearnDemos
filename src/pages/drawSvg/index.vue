@@ -50,10 +50,6 @@ export default {
   mounted() {
     this.drawSvgFn();
     window.addEventListener("resize", this.reDraw);
-<<<<<<< HEAD
-=======
-   
->>>>>>> 012edfbdc07aed2f10c18f5961d541410204b301
   },
   beforeDestroy() {
     window.removeEventListener("resize", this.reDraw);
