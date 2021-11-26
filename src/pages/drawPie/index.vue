@@ -103,7 +103,6 @@ export default {
 }
 .left,
 .right {
-  display: inline-block;
   width: 50%;
   height: 100%;
 }

@@ -78,7 +78,6 @@ export default {
   height: 100%;
 }
 .left,.right{
-  display: inline-block;
   width:50%;
   height: 100%;
 }
