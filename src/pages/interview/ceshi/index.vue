@@ -26,7 +26,6 @@ export default {
   data() {
     return {};
   },
-  components: {},
   methods: {
     onChange(val) {
       this.$emit("change", val);
