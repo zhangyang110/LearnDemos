@@ -8,6 +8,7 @@
     <ceshiForm
       v-model="ruleForm.age"
       prop="age"
+      
   />
   </el-form>
 </template>
