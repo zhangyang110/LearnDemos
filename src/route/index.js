@@ -106,4 +106,12 @@ export default [
             desc:'计算渐变 '
         }
     },
+    {
+        path: 'sandBoxIframe',
+        name: 'sandBoxIframe',
+        component: "sandBoxIframe",
+        meta:{
+            desc:'嵌套sandBox'
+        }
+    },
 ]

@@ -25,7 +25,7 @@ function base64ToFile(dataURI, origFile) {
   let origProps = [
     "upload", "status", "previewElement", "previewTemplate", "accepted"
   ];
-  origProps.forEach((item, index) => {
+  origProps.forEach((item) => {
     newFile[item] = origFile[item];
   });
   return newFile;
@@ -38,7 +38,8 @@ export const compressImgFn = function (origFile, callback) {
   reader.addEventListener('load', function (event) {
     let origImg = new Image();
     origImg.src = event.target.result;
-    origImg.addEventListener("load", function (event) {
+    origImg.addEventListener("load", function () {
+      //event 参数
       let width = MAX_WIDTH; //event.target.width;
       let height = MAX_HEIGHT; //event.target.height;
       let canvas = document.createElement('canvas');
