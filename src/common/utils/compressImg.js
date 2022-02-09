@@ -3,7 +3,7 @@
  */
 
 // 64码流转文件
-function base64ToFile(dataURI, origFile) {
+export const base64ToFile= function (dataURI, origFile) {
   let byteString, mimestring;
 
   if (dataURI.split(',')[0].indexOf('base64') !== -1) {
