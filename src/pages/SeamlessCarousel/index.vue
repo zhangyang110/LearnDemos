@@ -19,9 +19,15 @@ export default {
       moveFlag: false,
     };
   },
+   mounted() {
+    this.scrollFn();
+  },
   created() {
     let originList = cloneDeep(this.originList);
     this.list.push(...originList, ...originList)
+  },
+  beforeDestroy(){
+    clearInterval(this.timer)
   },
   watch: {
     // moveFlag(val) {
@@ -30,9 +36,7 @@ export default {
     //   }
     // }
   },
-  mounted() {
-    this.scrollFn();
-  },
+ 
   methods: {
     scrollFn() {
       clearInterval(this.timer)
@@ -59,6 +63,7 @@ export default {
       }, 2000)
     },
   },
+
 };
 </script>
 <style scoped>
