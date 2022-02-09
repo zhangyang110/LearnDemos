@@ -51,14 +51,12 @@ export default {
     setBackground() {
       let container = this.$refs.container
       let RGBList = this.computedRGB();
-      console.log(RGBList);
-      console.log(container.children);
       Array.from(container.children).map((item, i,self) => {
         // item.style.backgroundColor = RGBList[i] // 每个格子是单一色
         if(i===(self.length-1)){
           item.style.backgroundColor = RGBList[i]
         }else{
-          item.style.background = `linear-gradient(to left,${RGBList[i]},${RGBList[i+1]})`// 每个格子是渐变色
+          item.style.background = `linear-gradient(to right,${RGBList[i]},${RGBList[i+1]})`// 每个格子是渐变色
         }
       })
 
