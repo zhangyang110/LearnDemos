@@ -83,11 +83,12 @@ li {
   text-align: center;
   background-color: #9a6e3a;
   border: 1px solid red;
-//flex: none; //box-sizing: border-box; //animation: height 0.1s linear forwards;
+/* //flex: none; //box-sizing: border-box; //animation: height 0.1s linear forwards; */
 }
 
 .animate {
-//animation: moveUp linear 2s infinite ; transition: margin-top linear 0.2s;
+  /* animation: moveUp linear 2s infinite ; */
+  transition: margin-top linear 0.2s;
 }
 
 /* 去掉页面滚动条 */
