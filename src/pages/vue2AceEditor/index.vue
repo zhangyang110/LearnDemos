@@ -114,13 +114,13 @@ export default {
       this.theme = this.arr[this.num];
       console.log("主题" + this.num + "__" + this.arr[this.num]);
     },
+
+   
   },
   mounted() {
     this.editorInit();
     this.theme = this.arr[0];
-    console.log(this.$refs.aceEditor.editor.setValue("设置的初始值"));
-    // this.$refs.aceEditor.editor.setFontSize(40)
-    console.log(' this.$refs.aceEditor===', this.$refs.aceEditor.editor)
+   this.$refs.aceEditor.editor.setValue("设置的初始值")
   },
 };
 </script>
