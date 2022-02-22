@@ -43,7 +43,8 @@
     "less": "^3.11.2",
     "less-loader": "^6.1.0",
     "style-loader": "^1.2.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vue2-ace-editor": "0.0.13"
   },
   "eslintConfig": {
     "root": true,

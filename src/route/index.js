@@ -114,4 +114,12 @@ export default [
             desc:'嵌套sandBox'
         }
     },
+    {
+        path:'vue2AceEditor',
+        name: 'sandvue2AceEditorBoxIframe',
+        component: "vue2AceEditor",
+        meta:{
+            desc:'vue2AceEditor 在线编辑器插件'
+        }
+    }
 ]
