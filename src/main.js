@@ -12,7 +12,10 @@ import echarts from 'echarts'
 import './mock'
 import AMap from 'vue-amap';
 import jsPlumb from 'jsplumb';
+import VueClipboard from 'vue-clipboard2'
 
+VueClipboard.config.autoSetContainer = true // 复制粘贴插件
+Vue.use(VueClipboard)
 Vue.prototype.$jsPlumb = jsPlumb.jsPlumb
 Vue.use(AMap);
 Vue.config.productionTip = false;

@@ -15,15 +15,22 @@
         tabSize: 6,
         fontSize: 12,
         showPrintMargin: false, //去除编辑器里的竖线
-
       }"
     ></editor>
-    <el-button type="primary" size="small" @click="getValue">获 取</el-button>
+    <el-button
+      type="primary"
+      size="small"
+      v-clipboard:copy="content"
+       v-clipboard:error="onError"
+      v-clipboard:success="onCopy">获 取</el-button>
     <el-button type="primary" size="small" @click="pre">上一个主题</el-button>
     <el-button type="primary" size="small" @click="next">下一个主题</el-button>
+    <el-button type="primary" size="small" @click="joinpath" >joinpath</el-button>
+    <el-button type="primary" size="small" @click="changeColorByJs">changeColorByJs</el-button>
   </div>
 </template>
 <script>
+import apiClient from "@/common/apiclient/perfectApiclient/perfectApiclient";
 export default {
   data() {
     return {
@@ -86,15 +93,13 @@ export default {
         require("brace/theme/" + this.arr[i]);
       }
       require("brace/snippets/javascript"); //snippet
-
     },
-    getValue() {
-      //获取编辑器中的值
-      console.log("编辑器中的值：" + this.$refs.aceEditor.editor.getValue());
-      console.log(
-        "编辑器中第一个换行符的位置：" +
-          this.$refs.aceEditor.editor.getValue().indexOf("\n")
-      );
+    onCopy(e) {
+      console.log('e===', e)
+      this.$message.success('复制成功！')
+    },
+    onError(){
+      this.$message.success('复制失败！')
     },
     pre() {
       //切换到上一个主题
@@ -103,7 +108,7 @@ export default {
       }
       this.num--;
       this.theme = this.arr[this.num];
-      console.log("主题" + this.num + "__" + this.arr[this.num]);
+      this.$message("主题" + this.num + "__" + this.arr[this.num]);
     },
     next() {
       //切换到下一个主题
@@ -112,18 +117,40 @@ export default {
       }
       this.num++;
       this.theme = this.arr[this.num];
-      console.log("主题" + this.num + "__" + this.arr[this.num]);
+     this.$message("主题" + this.num + "__" + this.arr[this.num]);
     },
 
-   
+    // 一部分面试题
+    joinpath() {
+      apiClient
+        .request({
+          url: "/passiveRequest/joinPath.html",
+          type: "get",
+          params: {},
+        })
+        .then((res) => {
+          this.$refs.aceEditor.editor.setValue(res);
+        });
+    },
+    changeColorByJs() {
+      apiClient
+        .request({
+          url: "/passiveRequest/changeColorByJs.html",
+          type: "get",
+          params: {},
+        })
+        .then((res) => {
+          this.$refs.aceEditor.editor.setValue(res);
+        });
+    },
   },
   mounted() {
     this.editorInit();
     this.theme = this.arr[0];
-   this.$refs.aceEditor.editor.setValue("设置的初始值")
+    this.$refs.aceEditor.editor.setValue(`设置的初始值;\n复制插件使用\n"vue2-ace-editor":"0.0.13"`);
+    // qingqiu shuju
   },
 };
 </script>
 <style lang='less' scoped>
-
 </style>
