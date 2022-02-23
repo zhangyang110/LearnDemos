@@ -13,8 +13,9 @@ export const staticRoutes=[
 export const notFoundRoute=[
     { path: '*', component: () => import("@/pages/404"), }
 ]
-//这个是 当作axios 接口请求返回的作用
 
+
+//如下 这个是 模拟axio接口请求返回的异步操作
 export default [
     {
         path: 'drawSvg',
@@ -51,27 +52,18 @@ export default [
     {
         path: 'monaco',
         name: 'monaco',
-        component: 'monaco',
-        meta:{
-            desc:'monaco插件',
-            auth:['admin']
-        }
-    },
-    {
-        path: 'compressImg',
-        name: 'compressImg',
-        component:  'compressImg',
+        component:'monaco',
         meta:{
             desc:'前端压缩图片',
             auth:['admin']
         }
     },
     {
-        path: 'interview',
-        name: 'interview',
-        component: "interview",
+        path: 'dynamicFormInputDemo',
+        name: 'dynamicFormInputDemo',
+        component: "dynamicFormInputDemo",
         meta:{
-            desc:'面试题'
+            desc:'dynamicFormInputDemo'
         }
     },
     {

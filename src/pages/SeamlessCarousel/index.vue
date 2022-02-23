@@ -10,7 +10,7 @@
 import {cloneDeep} from "lodash"
 
 export default {
-  name: "interview",
+  name: "dynamicFormInputDemo",
   data() {
     return {
       list: [],

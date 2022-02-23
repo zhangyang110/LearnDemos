@@ -15,7 +15,7 @@
 <script>
 import ceshiForm from "./ceshi";
 export default {
-  name: "interview",
+  name: "dynamicFormInputDemo",
   components: {
     ceshiForm,
   },

@@ -17,16 +17,21 @@
         showPrintMargin: false, //去除编辑器里的竖线
       }"
     ></editor>
-    <el-button
+   
+    <el-button type="primary" size="small" @click="pre">上一个主题</el-button>
+    <el-button type="primary" size="small" @click="next">下一个主题</el-button>
+     <el-button
       type="primary"
       size="small"
       v-clipboard:copy="content"
        v-clipboard:error="onError"
       v-clipboard:success="onCopy">获 取</el-button>
-    <el-button type="primary" size="small" @click="pre">上一个主题</el-button>
-    <el-button type="primary" size="small" @click="next">下一个主题</el-button>
+      <br>
+      <br>
+      <br>
     <el-button type="primary" size="small" @click="joinpath" >joinpath</el-button>
     <el-button type="primary" size="small" @click="changeColorByJs">changeColorByJs</el-button>
+    <el-button type="primary" size="small" @click="inertsort">插入排序</el-button>
   </div>
 </template>
 <script>
@@ -143,6 +148,17 @@ export default {
           this.$refs.aceEditor.editor.setValue(res);
         });
     },
+    inertsort(){
+      apiClient
+        .request({
+          url: "/passiveRequest/sortByMySelf1.js",
+          type: "get",
+          params: {},
+        })
+        .then((res) => {
+          this.$refs.aceEditor.editor.setValue(res);
+        });
+    }
   },
   mounted() {
     this.editorInit();
