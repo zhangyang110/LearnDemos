@@ -72,10 +72,7 @@ export default {
           params: {},
         })
         .then((res) => {
-          let self = this;
-          setTimeout(() => {
-            self.code = res;
-          }, 3000);
+          this.code = res;
         });
     },
   },
