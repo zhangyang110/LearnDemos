@@ -9,6 +9,10 @@ import * as monaco from "monaco-editor";
 
 export default {
   name: "Monaco",
+  model: {
+    prop: 'propValue',
+    event: 'change'
+  },
   props: {
     propEditorOptions: {
       type: Object,
@@ -39,6 +43,7 @@ export default {
   },
   watch: {
     propValue(newVal) {
+      console.log('propValue change===', newVal)
       this.codes = newVal;
       this.initEditor();
     },
@@ -63,11 +68,12 @@ export default {
         ...self.propEditorOptions,
       });
       self.monacoEditor.onDidChangeModelContent(function () {
+        console.log('6666666===', 6666666)
         //编辑器内容changge事件
         self.codes = self.monacoEditor.getValue();
-        self.$emit("change", self.codes);
-        self.$emit("codeChange", self.codes);
       });
+        this.$emit("change", this.codes);// v-model
+        this.$emit("codeChange", this.codes);
     },
     formatEditor() {
       this.monacoEditor.getAction("editor.action.formatDocument").run();

@@ -21,7 +21,13 @@ Vue.use(AMap);
 Vue.config.productionTip = false;
 Vue.prototype.moment = moment;
 Vue.prototype.$echarts = echarts
-
+// 组件可编辑
+Vue.prototype.$extendComps = function(info){
+    return Vue.extend({
+      ...info,
+      store
+    })
+  }
 Vue.use(ElementUI);
 // 初始化vue-amap 高德地图
 AMap.initAMapApiLoader({
@@ -32,7 +38,7 @@ AMap.initAMapApiLoader({
     v: '1.4.4',
     uiVersion: '1.0'
 });
-sync(store,router);  
+sync(store,router);
 new Vue({
     router,
     store,

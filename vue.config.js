@@ -37,6 +37,11 @@ module.exports = {
             .set("@static", resolve("static"))
     },
     configureWebpack: {
+        resolve: {
+            alias: {
+              'vue$': 'vue/dist/vue.esm.js' 
+            }
+          },
         plugins: [
             new MonacoWebpackPlugin({
                 languages: ['javascript', 'css', 'html', 'typescript', 'json']
