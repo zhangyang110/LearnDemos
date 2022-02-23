@@ -9,10 +9,7 @@ import * as monaco from "monaco-editor";
 
 export default {
   name: "Monaco",
-  model: {
-    prop: 'propValue',
-    event: 'change'
-  },
+
   props: {
     propEditorOptions: {
       type: Object,
@@ -30,9 +27,7 @@ export default {
     },
   },
   data() {
-    return {
-      codes: "",
-    };
+    return {};
   },
   mounted() {
     this.initEditor();
@@ -43,16 +38,15 @@ export default {
   },
   watch: {
     propValue(newVal) {
-      this.codes = newVal;
-      this.monacoEditor.setValue(newVal)
+      this.monacoEditor.setValue(newVal);
     },
   },
   methods: {
     initEditor() {
       let self = this;
-      self.$refs.container.innerHTML = "";  
+      self.$refs.container.innerHTML = "";
       self.monacoEditor = monaco.editor.create(self.$refs.container, {
-        value: self.codes,
+        value: self.propValue,
         language: this.propLanguage, //JavaScript Css ...
         theme: "hc-black", //vs-dark- 深色  hc-black-高亮 vs-默认
         selectOnLineNumbers: true,
@@ -71,11 +65,9 @@ export default {
     formatEditor() {
       this.monacoEditor.getAction("editor.action.formatDocument").run();
     },
-    editorChanged(){
-        this.codes = this.monacoEditor.getValue();
-        this.$emit("change", this.codes);// v-model
-        this.$emit("codeChange", this.codes);
-    }
+    editorChanged() {
+      this.$emit("change", this.monacoEditor.getValue()); // v-model
+    },
   },
 };
 </script>

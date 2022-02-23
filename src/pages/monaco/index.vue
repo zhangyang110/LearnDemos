@@ -1,8 +1,7 @@
 <template>
   <div>
     <div ref="instanceBox" class="showChild"></div>
-    <Monaco @change="(code) => editorInput(code)" v-model="code" />
-    <el-button type="primary" @click="getInfo">Get content</el-button>
+    <Monaco @change="(code) => editorInput(code)" :propValue="code" />
   </div>
 </template>
 
@@ -24,16 +23,8 @@ export default {
     };
   },
   methods: {
-    getInfo() {
-      this.$notify({
-        title: "monaco内容",
-        message: `${this.$refs.monaco.codes}`,
-        position: "top-right",
-      });
-    },
-
     editorInput(code = "") {
-      if(!code)return
+      if (!code) return;
       try {
         let codeStrig = code.replace(/\n+/g, "").replace(/\s+/g, " ");
 
@@ -79,7 +70,7 @@ export default {
 };
 </script>
 <style scoped>
-.showChild{
+.showChild {
   height: 100px;
 }
 </style>
