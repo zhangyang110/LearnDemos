@@ -10,7 +10,7 @@ import Monaco from "@/components/monaco";
 import apiClient from "@/common/apiclient/perfectApiclient/perfectApiclient";
 
 export default {
-  name: "index",
+  name: "monacoPage",
   components: {
     Monaco,
   },
