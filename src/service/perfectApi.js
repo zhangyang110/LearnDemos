@@ -34,7 +34,8 @@ export function getBlob(response) {
 }
 
 /**created by ZhangY on 2020/6/8
- *@desc downLoad
+ * 这是需要接口返回blob 对象
+ *@desc downLoad  
  */
 export function downLoad(response, name) {
     getBlob(response).then((res) => {
@@ -55,6 +56,25 @@ export function downLoad(response, name) {
     })
 }
 
+/**
+* @author MasterYi 2022-02-23
+* @description  
+*/
+export function stringToFile(string, fileName) {
+    let newBlob = new Blob([string]);
+    if (window.navigator.msSaveOrOpenBlob) {
+        navigator.msSaveBlob(newBlob, fileName)
+    } else {
+        let link = document.createElement('a');
+        link.href = window.URL.createObjectURL(newBlob);
+        link.download = fileName;
+        document.body.appendChild(link);
+        let evt = document.createEvent('MouseEvents');
+        evt.initEvent('click', false, false)
+        link.dispatchEvent(evt)
+        document.body.removeChild(link)
+    }
+}
 
 
 

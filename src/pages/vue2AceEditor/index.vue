@@ -20,14 +20,7 @@
 
     <el-button type="primary" size="small" @click="pre">上一个主题</el-button>
     <el-button type="primary" size="small" @click="next">下一个主题</el-button>
-    <el-button
-      type="primary"
-      size="small"
-      v-clipboard:copy="content"
-      v-clipboard:error="onError"
-      v-clipboard:success="onCopy"
-      >获 取</el-button
-    >
+
     <br />
     <br />
     <br />
@@ -40,10 +33,26 @@
     <el-button type="primary" size="small" @click="inertsort"
       >插入排序</el-button
     >
+    <br />
+    <br />
+    <br />
+    <br />
+    <el-button
+      type="primary"
+      size="small"
+      v-clipboard:copy="content"
+      v-clipboard:error="onError"
+      v-clipboard:success="onCopy"
+      >获 取</el-button
+    >
+    <el-button type="primary" size="small" @click="downLoadDemo"
+      >下载</el-button
+    >
   </div>
 </template>
 <script>
 import apiClient from "@/common/apiclient/perfectApiclient/perfectApiclient";
+import { stringToFile } from "@/service/perfectApi.js";
 export default {
   data() {
     return {
@@ -167,6 +176,12 @@ export default {
           this.$refs.aceEditor.editor.setValue(res);
         });
     },
+    downLoadDemo() {
+      // 判断 文件类型
+      let isHtml = /^<!DOCTYPE html>/.test(this.content);
+      let fileName=isHtml?'demo.html':'demo.js';
+      stringToFile(this.content, fileName);
+    },
   },
   mounted() {
     this.editorInit();
@@ -174,7 +189,6 @@ export default {
     this.$refs.aceEditor.editor.setValue(
       `设置的初始值;\n复制插件使用\n"vue2-ace-editor":"0.0.13"`
     );
-    // qingqiu shuju
   },
 };
 </script>
