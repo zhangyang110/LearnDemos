@@ -10,7 +10,12 @@ export default {
   data() {
     return {
       radio: "1",
-    };
+    }
+  },
+  watch:{
+    radio(newVal) {
+      console.log(newVal);
+    },
   },
 }
 </script>
