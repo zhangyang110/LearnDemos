@@ -43,15 +43,14 @@ export default {
   },
   watch: {
     propValue(newVal) {
-      console.log('propValue change===', newVal)
       this.codes = newVal;
-      this.initEditor();
+      this.monacoEditor.setValue(newVal)
     },
   },
   methods: {
     initEditor() {
       let self = this;
-      self.$refs.container.innerHTML = "";
+      self.$refs.container.innerHTML = "";  
       self.monacoEditor = monaco.editor.create(self.$refs.container, {
         value: self.codes,
         language: this.propLanguage, //JavaScript Css ...
@@ -67,17 +66,16 @@ export default {
         autoIndent: true, //自动布局
         ...self.propEditorOptions,
       });
-      self.monacoEditor.onDidChangeModelContent(function () {
-        console.log('6666666===', 6666666)
-        //编辑器内容changge事件
-        self.codes = self.monacoEditor.getValue();
-      });
-        this.$emit("change", this.codes);// v-model
-        this.$emit("codeChange", this.codes);
+      self.monacoEditor.onDidChangeModelContent(this.editorChanged);
     },
     formatEditor() {
       this.monacoEditor.getAction("editor.action.formatDocument").run();
     },
+    editorChanged(){
+        this.codes = this.monacoEditor.getValue();
+        this.$emit("change", this.codes);// v-model
+        this.$emit("codeChange", this.codes);
+    }
   },
 };
 </script>

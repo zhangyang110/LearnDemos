@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="instanceBox"></div>
+    <div ref="instanceBox" class="showChild"></div>
     <Monaco @change="(code) => editorInput(code)" v-model="code" />
     <el-button type="primary" @click="getInfo">Get content</el-button>
   </div>
@@ -34,7 +34,6 @@ export default {
 
     editorInput(code = "") {
       if(!code)return
-      console.log("editorInput  ----code===", code);
       try {
         let codeStrig = code.replace(/\n+/g, "").replace(/\s+/g, " ");
 
@@ -82,3 +81,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.showChild{
+  height: 100px;
+}
+</style>
