@@ -18,8 +18,12 @@ export default {
   computed: {
     
   },
-  components: { 
-    "aComp":require('./a.vue');// 不会被解析
+  components:{ 
+   "aComp":"sss",
+    "aComp":"sss",
+    "aComp":"sss",
+    "aComp":"sss",
+    "aComp":"sss",
   },
   watch: {
     radio(newVal) {
