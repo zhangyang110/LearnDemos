@@ -63,12 +63,12 @@ export default {
           params: {},
         })
         .then((res) => {
-          this.code = res;
-          let codeStrig = res.replace(/\n+/g, "").replace(/\s+/g, " ");
-          let dataString = codeStrig
-                    .match(/export default(.*)<\/script>/)[1]
-                    .replace(/\s\/\/.*?\s/g, "")
-                    .replace(/\scomponents:{(.*?)},/g, "");
+          // this.code = res;
+          // let codeStrig = res.replace(/\n+/g, "").replace(/\s+/g, " ");
+          // let dataString = codeStrig
+          //           .match(/export default(.*)<\/script>/)[1]
+          //           .replace(/\s\/\/.*?\s/g, "")
+          //           .replace(/\scomponents:{(.*?)},/g, "");
           // console.log('dataString===', dataString)
           // console.log('delcomponents===', /\scomponents(\s?):(\s?){.*}/g.test(dataString))
           // console.log('delcomponents===', dataString.match(/\scomponents:{(.*?)}/g))
