@@ -6,13 +6,26 @@
 </template>
 
 <script>
+import aComp from "./a.vue";//
 export default {
   data() {
     return {
       radio: "1",
-    }
+    };
   },
-  watch:{
+  mounted() {},
+  created() {},
+  computed: {
+    
+  },
+  components:{ 
+   "aComp":"sss",
+    "aComp":"sss",
+    "aComp":"sss",
+    "aComp":"sss",
+    "aComp":"sss",
+  },
+  watch: {
     radio(newVal) {
       console.log(newVal);
     },

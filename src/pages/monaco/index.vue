@@ -33,7 +33,7 @@ export default {
         let dataString = codeStrig
           .match(/export default(.*)<\/script>/)[1]
           .replace(/\s\/\/.*?\s/g, "")
-          .replace(/\scomponents:{.*?},/g, "");
+         .replace(/\scomponents:{(.*?)},/g, "");
         let dataObj = eval(`(${dataString})`);
 
         let newComponent = this.$extendComps({
@@ -51,7 +51,7 @@ export default {
         parent.appendChild(instance.$mount().$el);
       } catch (error) {
         console.error(error);
-        this.$message({ type: "error", message: "编辑的代码存在问题" });
+        // this.$message({ type: "error", message: "编辑的代码存在问题" });
       }
     },
 
@@ -64,8 +64,20 @@ export default {
         })
         .then((res) => {
           this.code = res;
-        });
+          // let codeStrig = res.replace(/\n+/g, "").replace(/\s+/g, " ");
+          // let dataString = codeStrig
+          //           .match(/export default(.*)<\/script>/)[1]
+          //           .replace(/\s\/\/.*?\s/g, "")
+          //           .replace(/\scomponents:{(.*?)},/g, "");
+          // console.log('dataString===', dataString)
+          // console.log('delcomponents===', /\scomponents(\s?):(\s?){.*}/g.test(dataString))
+          // console.log('delcomponents===', dataString.match(/\scomponents:{(.*?)}/g))
+          
+          
+          });
     },
+
+   
   },
 };
 </script>
