@@ -6,13 +6,22 @@
 </template>
 
 <script>
+import aComp from "./a.vue";//
 export default {
   data() {
     return {
       radio: "1",
-    }
+    };
   },
-  watch:{
+  mounted() {},
+  created() {},
+  computed: {
+    
+  },
+  components: { 
+    "aComp":require('./a.vue');// 不会被解析
+  },
+  watch: {
     radio(newVal) {
       console.log(newVal);
     },
