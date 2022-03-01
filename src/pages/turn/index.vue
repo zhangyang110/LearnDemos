@@ -4,6 +4,7 @@
       v-for="(img, i) in imgList"
       :key="i"
       :style="{ background: `url(${img})` }"
+      class="imgItem"
     ></div>
   </div>
 </template>
@@ -30,7 +31,9 @@ export default {
       display: "double",
       acceleration: true,
       gradients: !$.isTouch,
-      elevation: 50,
+      elevation: 10,
+
+		  autoCenter: true
       // when: {
       //   turned: function (e, page) {
       //     console.log(e);
@@ -51,12 +54,9 @@ export default {
 </script>
 <style lang='less' scoped>
 #magazine {
-  // width: 1152px;
-  // height: 752px;
   width: 550px;
-  height: 380px;
 }
-#magazine .turn-page {
+.imgItem {
   background-color: #ccc;
   background-size: 100% 100%;
 }
