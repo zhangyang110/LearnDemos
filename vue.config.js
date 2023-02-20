@@ -7,9 +7,10 @@ const resolve = (dir) => path.join(__dirname, './', dir);
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 
 module.exports = {
-    publicPath: '',
+    publicPath: './',
     outputDir: 'dist',
     assetsDir: "static",
+    lintOnSave:false,
     devServer: {
         port: 8080,
         open: true,
