@@ -35,19 +35,19 @@ export default {
       elevation: 10,
       // eslint-disable-next-line no-mixed-spaces-and-tabs
 		  autoCenter: true,
-      // when: {
-      //   turned: function (e, page) {
-      //     console.log(e);
-      //     console.log(page);
-      //     /*console.log('Current view: ', $(this).turn('view'));*/
-      //   },
-      // },
+      when: {
+        turned: function (e, page) {
+          console.log(e);
+          console.log(page);
+          /*console.log('Current view: ', $(this).turn('view'));*/
+        },
+      },
     });
 
-    // $(window).bind("keydown", function (e) {
-    //   if (e.keyCode == 37) $("#magazine").turn("previous");
-    //   else if (e.keyCode == 39) $("#magazine").turn("next");
-    // });
+    $(window).bind("keydown", function (e) {
+      if (e.keyCode == 37) $("#magazine").turn("previous");
+      else if (e.keyCode == 39) $("#magazine").turn("next");
+    });
   },
 
   methods: {},
@@ -56,9 +56,10 @@ export default {
 <style lang='less' scoped>
 #magazine {
   width: 550px;
+  height: 380px;
 }
 .imgItem {
   background-color: #ccc;
-  background-size: 100% 100%;
+  background-size: 100% 100% !important;
 }
 </style>
