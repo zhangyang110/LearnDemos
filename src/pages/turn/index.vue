@@ -14,6 +14,7 @@ let imgList = new Array(6).fill(1).map((t, i) => {
   return require(`@/assets/turnjsImg/0${i + 1}.jpg`);
 });
 export default {
+  name:'turn',
   data() {
     return {
       imgList,
@@ -32,8 +33,8 @@ export default {
       acceleration: true,
       gradients: !$.isTouch,
       elevation: 10,
-
-		  autoCenter: true
+      // eslint-disable-next-line no-mixed-spaces-and-tabs
+		  autoCenter: true,
       // when: {
       //   turned: function (e, page) {
       //     console.log(e);

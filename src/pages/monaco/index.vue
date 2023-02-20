@@ -1,7 +1,11 @@
 <template>
   <div>
+    实时渲染
+    <br>
+    <br>
+    <br>
     <div ref="instanceBox" class="showChild"></div>
-    <Monaco @change="(code) => editorInput(code)" :propValue="code" />
+    <Monaco @change="(code) => editorInput(code)" :propValue="code"/>
   </div>
 </template>
 
@@ -31,9 +35,9 @@ export default {
         let templateString = codeStrig.match(/<template>(.*)<\/template>/)[1];
 
         let dataString = codeStrig
-          .match(/export default(.*)<\/script>/)[1]
-          .replace(/\s\/\/.*?\s/g, "")
-         .replace(/\scomponents:{(.*?)},/g, "");
+            .match(/export default(.*)<\/script>/)[1]
+            .replace(/\s\/\/.*?\s/g, "")
+            .replace(/\scomponents:{(.*?)},/g, "");
         let dataObj = eval(`(${dataString})`);
 
         let newComponent = this.$extendComps({
@@ -54,30 +58,17 @@ export default {
         // this.$message({ type: "error", message: "编辑的代码存在问题" });
       }
     },
-
     getDefaultVal() {
       apiClient
-        .request({
-          url: "/passiveRequest/monacoDemo.vue",
-          type: "get",
-          params: {},
-        })
-        .then((res) => {
-          this.code = res;
-          // let codeStrig = res.replace(/\n+/g, "").replace(/\s+/g, " ");
-          // let dataString = codeStrig
-          //           .match(/export default(.*)<\/script>/)[1]
-          //           .replace(/\s\/\/.*?\s/g, "")
-          //           .replace(/\scomponents:{(.*?)},/g, "");
-          // console.log('dataString===', dataString)
-          // console.log('delcomponents===', /\scomponents(\s?):(\s?){.*}/g.test(dataString))
-          // console.log('delcomponents===', dataString.match(/\scomponents:{(.*?)}/g))
-          
-          
+          .request({
+            url: "/passiveRequest/monacoDemo.vue",
+            type: "get",
+            params: {},
+          })
+          .then((res) => {
+            this.code = res;
           });
     },
-
-   
   },
 };
 </script>
