@@ -113,5 +113,13 @@ export default [
         meta:{
             desc:'vue2AceEditor 在线编辑器插件'
         }
-    }
+    },
+    {
+        path:'snakeGame',
+        name: 'snakeGame',
+        component: "snakeGame",
+        meta:{
+            desc:'贪吃蛇 小游戏'
+        }
+    },
 ]

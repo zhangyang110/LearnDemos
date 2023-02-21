@@ -26,7 +26,6 @@
     "three-css2drender": "^1.0.0",
     "three-obj-mtl-loader": "^1.0.3",
     "three-orbit-controls": "^82.1.0",
-    "turn": "0.0.0",
     "vue": "^2.6.11",
     "vue-amap": "^0.5.10",
     "vue-clipboard2": "^0.3.3",
@@ -37,6 +36,8 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-plugin-typescript": "~4.5.19",
+    "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/cli-service": "~4.4.0",
     "babel-eslint": "^10.1.0",
     "css-loader": "^3.5.3",
@@ -45,6 +46,8 @@
     "less": "^3.11.2",
     "less-loader": "^6.1.0",
     "style-loader": "^1.2.1",
+    "ts-loader": "^4.0.0",
+    "typescript": "~4.1.5",
     "vue-template-compiler": "^2.6.11",
     "vue2-ace-editor": "0.0.13"
   },
