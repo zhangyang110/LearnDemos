@@ -23,18 +23,10 @@
 
     <br />
     <br />
-    <br />
-    <el-button type="primary" size="small" @click="joinpath"
-      >joinpath</el-button
-    >
-    <el-button type="primary" size="small" @click="changeColorByJs"
-      >changeColorByJs</el-button
-    >
+    <el-button type="primary" size="small" @click="joinpath">joinpath</el-button>
+    <el-button type="primary" size="small" @click="changeColorByJs">changeColorByJs</el-button>
     <el-button type="primary" size="small" @click="inertsort"
-      >插入排序</el-button
-    >
-    <br />
-    <br />
+      >插入排序</el-button>
     <br />
     <br />
     <el-button
@@ -45,9 +37,7 @@
       v-clipboard:success="onCopy"
       >获 取</el-button
     >
-    <el-button type="primary" size="small" @click="downLoadDemo"
-      >下载</el-button
-    >
+    <el-button type="primary" size="small" @click="downLoadDemo">下载</el-button>
   </div>
 </template>
 <script>
