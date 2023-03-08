@@ -38,6 +38,7 @@ module.exports = {
             .set("@static", resolve("static"))
     },
     configureWebpack: {
+
         resolve: {
             alias: {
               'vue$': 'vue/dist/vue.esm.js'

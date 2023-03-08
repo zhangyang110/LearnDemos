@@ -122,4 +122,20 @@ export default [
             desc:'贪吃蛇 小游戏'
         }
     },
+    {
+        path:'matterJs',
+        name: 'matterJs',
+        component: "matterJs",
+        meta:{
+            desc:'matter.js 游戏引擎小实验'
+        }
+    },
+    {
+        path:'changeTheme',
+        name: 'changeTheme',
+        component: "changeTheme",
+        meta:{
+            desc:'styles demo'
+        }
+    },
 ]

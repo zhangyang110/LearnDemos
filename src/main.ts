@@ -1,17 +1,25 @@
+// @ts-ignore
 import Vue from 'vue';
 import App from './App.vue';
+// @ts-ignore
 import moment from "moment";
 import store from "./store";
 import router from "./router";
-import {sync} from 'vuex-router-sync'; 
+// @ts-ignore
+import {sync} from 'vuex-router-sync';
 import '@/common/style/index.less';
+// @ts-ignore
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+// @ts-ignore
 import echarts from 'echarts'
 //模拟数据
 import './mock'
+// @ts-ignore
 import AMap from 'vue-amap';
+// @ts-ignore
 import jsPlumb from 'jsplumb';
+// @ts-ignore
 import VueClipboard from 'vue-clipboard2'
 
 VueClipboard.config.autoSetContainer = true // 复制粘贴插件
